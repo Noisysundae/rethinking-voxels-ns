@@ -12,6 +12,6 @@ smoothnessD = factor8;
 
 DoBrightBlockTweaks(color.rgb, 0.5, shadowMult, highlightMult);
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
     noiseFactor = 0.5;
 #endif

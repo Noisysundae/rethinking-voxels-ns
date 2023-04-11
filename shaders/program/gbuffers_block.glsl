@@ -19,7 +19,7 @@ in vec3 normal;
 
 in vec4 glColor;
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	in vec2 signMidCoordPos;
 	flat in vec2 absMidCoordPos;
 #endif
@@ -61,7 +61,7 @@ uniform sampler2D tex;
 	#define ATLASTEX tex
 #endif
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
 	uniform sampler2D noisetex;
 #endif
 
@@ -116,7 +116,7 @@ float shadowTime = shadowTimeVar2 * shadowTimeVar2;
 	#include "/lib/util/jitter.glsl"
 #endif
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	#include "/lib/util/miplevel.glsl"
 #endif
 
@@ -124,7 +124,7 @@ float shadowTime = shadowTimeVar2 * shadowTimeVar2;
 	#include "/lib/materials/materialMethods/generatedNormals.glsl"
 #endif
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
 	#include "/lib/materials/materialMethods/coatedTextures.glsl"
 #endif
 
@@ -178,7 +178,7 @@ void main() {
 		GenerateNormals(normalM, colorP);
 	#endif
 
-	#ifdef COATED_TEXTURES
+	#if COATED_TEXTURES > 0
 		CoatTextures(color.rgb, noiseFactor, playerPos);
 	#endif
 
@@ -211,7 +211,7 @@ out vec3 normal;
 
 out vec4 glColor;
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	out vec2 signMidCoordPos;
 	flat out vec2 absMidCoordPos;
 #endif
@@ -227,7 +227,7 @@ out vec4 glColor;
 
 uniform int blockEntityId;
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 
 	uniform vec3 cameraPosition;
 
@@ -235,7 +235,7 @@ uniform int blockEntityId;
 #endif
 
 //Attributes//
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	attribute vec4 mc_midTexCoord;
 #endif
 
@@ -276,7 +276,7 @@ void main() {
 
 	if (normal != normal) normal = -upVec; // Mod Fix: Fixes Better Nether Fireflies
 
-	#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+	#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 		if (blockEntityId == 60008) { // Chest
 			float fractWorldPosY = fract((gbufferModelViewInverse * gl_ModelViewMatrix * gl_Vertex).y + cameraPosition.y);
 			if (fractWorldPosY > 0.56 && 0.57 > fractWorldPosY) gl_Position.z -= 0.0001;

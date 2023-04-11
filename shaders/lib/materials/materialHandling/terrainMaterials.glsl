@@ -70,7 +70,7 @@ if (mat < 10512) {
                                 smoothnessG = min1(smoothnessG);
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -133,7 +133,7 @@ if (mat < 10512) {
 
                                     #include "/lib/materials/specificMaterials/translucents/water.glsl"
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.0;
                                     #endif
                                 } else {
@@ -231,7 +231,7 @@ if (mat < 10512) {
                                 smoothnessG = 0.1 + color.r * 0.4;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -241,7 +241,7 @@ if (mat < 10512) {
                                 
                                 DoBrightBlockTweaks(color.rgb, 0.75, shadowMult, highlightMult);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -250,7 +250,7 @@ if (mat < 10512) {
                                 smoothnessG = pow2(color.g);
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -265,7 +265,7 @@ if (mat < 10512) {
                                 smoothnessG = min1(smoothnessG);
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -281,7 +281,7 @@ if (mat < 10512) {
                                 smoothnessG = color.r * 0.35 + 0.2;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -345,7 +345,7 @@ if (mat < 10512) {
                                     smoothnessG = color.g * 0.5;
                                     smoothnessD = smoothnessG;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.77;
                                     #endif
                                 }
@@ -357,7 +357,7 @@ if (mat < 10512) {
                                     smoothnessG = color.r * 0.5;
                                     smoothnessD = smoothnessG;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.77;
                                     #endif
                                 }
@@ -409,7 +409,7 @@ if (mat < 10512) {
                                     smoothnessG = pow2(color.g) * 0.25;
                                     smoothnessD = smoothnessG;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 1.25;
                                     #endif
                                 }
@@ -426,7 +426,7 @@ if (mat < 10512) {
                                     smoothnessG = min1(smoothnessG);
                                     smoothnessD = smoothnessG;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.77;
                                     #endif
                                 }
@@ -449,7 +449,7 @@ if (mat < 10512) {
                                     smoothnessG = min1(smoothnessG);
                                     smoothnessD = smoothnessG;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.66;
                                     #endif
                                 }
@@ -513,7 +513,7 @@ if (mat < 10512) {
                                 smoothnessG = color.b * 0.2 + 0.1;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 1.5;
                                 #endif
                             }
@@ -538,7 +538,7 @@ if (mat < 10512) {
                                 smoothnessD = smoothnessG * 0.7;
                                 highlightMult = 2.0;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
 
@@ -557,7 +557,7 @@ if (mat < 10512) {
 
                                 DoBrightBlockTweaks(color.rgb, 0.5, shadowMult, highlightMult);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -567,7 +567,7 @@ if (mat < 10512) {
                                 smoothnessG = min1(smoothnessG);
                                 smoothnessD = smoothnessG * 0.7;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.5;
                                 #endif
                             }
@@ -578,7 +578,7 @@ if (mat < 10512) {
                                 highlightMult = smoothnessG * 2.0;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.33;
                                 #endif
                             }
@@ -587,7 +587,7 @@ if (mat < 10512) {
                                 smoothnessG = min1(smoothnessG);
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 1.5;
                                 #endif
                                 
@@ -695,7 +695,7 @@ if (mat < 10512) {
                                 smoothnessD = smoothnessG;
                                 color.rgb *= 0.8 + color.r * 0.3;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.5;
                                 #endif
                             }
@@ -789,7 +789,7 @@ if (mat < 10512) {
 
                                 smoothnessD = factor;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -807,7 +807,7 @@ if (mat < 10512) {
 
                                 color.g *= 1.0 - emission * 0.07;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -911,7 +911,7 @@ if (mat < 10512) {
                                 smoothnessG = min1(smoothnessG);
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.5;
                                 #endif
                             }
@@ -935,7 +935,7 @@ if (mat < 10512) {
                                 highlightMult = factor2 * 3.5;
                                 smoothnessD = factor;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.33;
                                 #endif
                             }
@@ -947,7 +947,7 @@ if (mat < 10512) {
                                 highlightMult = factor2 * 3.5;
                                 smoothnessD = pow1_5(color.g);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.33;
                                 #endif
                             }
@@ -987,7 +987,7 @@ if (mat < 10512) {
                                 smoothnessG = color.r * 0.35;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -1016,7 +1016,7 @@ if (mat < 10512) {
                                 smoothnessG = factor;
                                 smoothnessD = factor;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -1025,7 +1025,7 @@ if (mat < 10512) {
                                 smoothnessG = color.r * 0.75;
                                 smoothnessD = color.r * 0.5;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -1040,7 +1040,7 @@ if (mat < 10512) {
                                 highlightMult = 1.5;
                                 smoothnessD = 0.17;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.33;
                                 #endif
                             }
@@ -1048,7 +1048,7 @@ if (mat < 10512) {
                                 smoothnessG = 0.75;
                                 smoothnessD = 0.35;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.5;
                                 #endif
                             }
@@ -1058,7 +1058,7 @@ if (mat < 10512) {
                                 highlightMult = 1.5;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -1067,7 +1067,7 @@ if (mat < 10512) {
                                 highlightMult = 1.5;
                                 smoothnessD = smoothnessG;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -1095,7 +1095,7 @@ if (mat < 10512) {
 
                                 color.rb *= vec2(1.13, 1.1);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.5;
                                 #endif
                             }
@@ -1143,7 +1143,7 @@ if (mat < 10512) {
                                 highlightMult = 1.5;
                                 smoothnessD = 0.3;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.2;
                                 #endif
                             }
@@ -1154,7 +1154,7 @@ if (mat < 10512) {
                                 smoothnessG = 0.2;
                                 smoothnessD = 0.1;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.5;
                                 #endif
                             }
@@ -1295,7 +1295,7 @@ if (mat < 10512) {
                                 smoothnessG = factor;
                                 smoothnessD = factor;
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -1326,7 +1326,7 @@ if (mat < 10512) {
                                     smoothnessG = factor;
                                     smoothnessD = factor * 0.9;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.33;
                                     #endif
                                 }
@@ -1341,7 +1341,7 @@ if (mat < 10512) {
                                     smoothnessG = factor;
                                     smoothnessD = factor * 0.7;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.33;
                                     #endif
                                 }
@@ -1355,7 +1355,7 @@ if (mat < 10512) {
                                     smoothnessG = factor;
                                     smoothnessD = factor * 0.5;
 
-                                    #ifdef COATED_TEXTURES
+                                    #if COATED_TEXTURES > 0
                                         noiseFactor = 0.33;
                                     #endif
                                 }
@@ -1737,7 +1737,7 @@ if (mat < 10512) {
                                 }
                             }
                             else /*if (mat == 10668)*/ { // Wool+, Carpet+
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -1752,14 +1752,14 @@ if (mat < 10512) {
 
                                 DoBrightBlockTweaks(color.rgb, 0.5, shadowMult, highlightMult);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.33;
                                 #endif
                             }
                             else /*if (mat == 10676)*/ { // Barrel, Beehive, Bee Nest, Honeycomb Block
                                 #include "/lib/materials/specificMaterials/terrain/cobblestone.glsl"
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.66;
                                 #endif
                             }
@@ -1852,7 +1852,7 @@ if (mat < 10512) {
 
                                 DoOceanBlockTweaks(smoothnessD);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 0.77;
                                 #endif
                             }
@@ -1867,7 +1867,7 @@ if (mat < 10512) {
                                 
                                 DoOceanBlockTweaks(smoothnessD);
 
-                                #ifdef COATED_TEXTURES
+                                #if COATED_TEXTURES > 0
                                     noiseFactor = 1.25;
                                 #endif
                             }

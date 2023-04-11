@@ -1,6 +1,6 @@
 smoothnessG = color.r;
 smoothnessD = color.r;
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
     noiseFactor = 0.33;
 #endif

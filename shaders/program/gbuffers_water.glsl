@@ -165,7 +165,7 @@ float GetLinearDepth(float depth) {
 	#include "/lib/util/jitter.glsl"
 #endif
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	#include "/lib/util/miplevel.glsl"
 #endif
 

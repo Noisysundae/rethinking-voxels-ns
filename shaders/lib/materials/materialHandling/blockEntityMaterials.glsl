@@ -18,7 +18,7 @@ if (blockEntityId > 1) {
                     #include "/lib/materials/specificMaterials/others/signText.glsl"
                 }
 
-                #ifdef COATED_TEXTURES
+                #if COATED_TEXTURES > 0
                     noiseFactor = 0.66;
                 #endif
             } else /*if (blockEntityId == 60008)*/ { // Chest
@@ -26,7 +26,7 @@ if (blockEntityId > 1) {
 
                 smoothnessG = pow2(color.g);
 
-                #ifdef COATED_TEXTURES
+                #if COATED_TEXTURES > 0
                     noiseFactor = 0.66;
                 #endif
             }
@@ -43,12 +43,12 @@ if (blockEntityId > 1) {
                     emission = pow2(factor) * 20.0;
                 emission += 0.35;
                 
-                #ifdef COATED_TEXTURES
+                #if COATED_TEXTURES > 0
                     noiseFactor = 0.66;
                 #endif
             } else /*if (blockEntityId == 60016)*/ { // Shulker Box+, Banner+, Head+, Bed+
                 noSmoothLighting = true;
-                #ifdef COATED_TEXTURES
+                #if COATED_TEXTURES > 0
                     noiseFactor = 0.2;
                 #endif
             }
