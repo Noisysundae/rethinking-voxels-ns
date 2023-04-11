@@ -57,7 +57,7 @@ uniform sampler2D tex;
 	#define ATLASTEX tex
 #endif
 
-#if defined NETHER || RAIN_PUDDLES >= 1 || defined COATED_TEXTURES || defined SNOWY_WORLD
+#if defined NETHER || RAIN_PUDDLES >= 1 || COATED_TEXTURES > 0 || defined SNOWY_WORLD
 	uniform sampler2D noisetex;
 #endif
 
@@ -150,7 +150,7 @@ float GetMaxColorDif(vec3 color) {
 	#include "/lib/util/jitter.glsl"
 #endif
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	#include "/lib/util/miplevel.glsl"
 #endif
 
@@ -158,7 +158,7 @@ float GetMaxColorDif(vec3 color) {
 	#include "/lib/materials/materialMethods/generatedNormals.glsl"
 #endif
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
 	#include "/lib/materials/materialMethods/coatedTextures.glsl"
 #endif
 
@@ -207,7 +207,7 @@ void main() {
 				if (!noGeneratedNormals) GenerateNormals(normalM, colorP);
 			#endif
 
-			#ifdef COATED_TEXTURES
+			#if COATED_TEXTURES > 0
 				CoatTextures(color.rgb, noiseFactor, playerPos);
 			#endif
 		#else

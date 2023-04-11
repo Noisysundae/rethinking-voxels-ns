@@ -506,7 +506,16 @@ option.GENERATED_NORMALS=Generated Normals
 option.GENERATED_NORMALS.comment=Adds auto-generated bumpy details to surfaces. §e[*]§r RP Support option must be set to Integrated PBR+.
 
 option.COATED_TEXTURES=Coated Textures
-option.COATED_TEXTURES.comment=Adds auto-generated noise to textures. §e[*]§r RP Support option must be set to Integrated PBR+.
+option.COATED_TEXTURES.comment=Adds auto-generated noise to textures. §e[*]§r RP Support option must be set to Integrated PBR+. §e[*]§r Resolution change does not affect performance.
+value.COATED_TEXTURES.0=OFF
+value.COATED_TEXTURES.8=8x8 §e[*]
+value.COATED_TEXTURES.16=16x16 §e[*]
+value.COATED_TEXTURES.32=32x32 §e[*]
+value.COATED_TEXTURES.64=64x64 §e[*]
+value.COATED_TEXTURES.128=128x128 §e[*]
+value.COATED_TEXTURES.256=256x256 §e[*]
+value.COATED_TEXTURES.512=512x512 §e[*]
+value.COATED_TEXTURES.1024=1024x1024 §e[*]
 
 option.GLOWING_ORES=Glowing Ores
 option.GLOWING_ORES.comment=Adds emission to ores. §e[*]§r RP Support option must be set to Integrated PBR+.

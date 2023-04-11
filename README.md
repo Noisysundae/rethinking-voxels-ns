@@ -1,4 +1,5 @@
 # Rethinking Voxels
+
 Hello!
 
 You are looking at rethinking-voxels, a minecraft shaderpack. It is an edited version of Complementary Reimagined, and it follows the same visual style, but it also has coloured lights with ray-traced shadows and more VL.
@@ -10,6 +11,17 @@ To install this shaderpack, you need to have minecraft 1.19.2 or later (older ve
 Once you have a shader loader installed, you can either clone this repository into your shaderpacks folder, or download it from [Modrinth](https://modrinth.com/shader/rethinking-voxels)
 
 you can find your shaderpacks folder by opening minecraft with Iris or OptiFine installed, navigating to `Options` -> `Video Settings` -> `Shader Packs` -> `Open Shader Pack Folder`. If you are using Iris, you can also drag-and-drop the zip file in the shader selection menu to install it.
+
+## Noisysundae Edit (`rethinking-voxels-ns`)
+
+### Changelog
+
+- **v0.1~0.1a**
+	- Fix white texture on still lava sources
+	- Change Reimagined cloud texture to that of vanilla, along with speed and less roundness
+	- Variable noise-coated texture resolution
+
+---
 
 ## Credits
 

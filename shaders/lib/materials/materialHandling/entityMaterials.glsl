@@ -23,7 +23,7 @@ if (entityId < 50064) {
             if (entityId < 50024) {
                 if (entityId == 50016) { // Player
                     if (entityColor.a < 0.001) {
-                        #ifdef COATED_TEXTURES
+                        #if COATED_TEXTURES > 0
                             noiseFactor = 0.5;
                         #endif
 

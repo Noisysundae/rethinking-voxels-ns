@@ -135,7 +135,7 @@
     #if RP_MODE == 1
         #define IPBR
         //#define GENERATED_NORMALS
-        //#define COATED_TEXTURES
+        #define COATED_TEXTURES 0 //[0 8 16 32 64 128 256 512 1024]
     #endif
 
     #if RP_MODE >= 2

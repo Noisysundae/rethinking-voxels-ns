@@ -60,6 +60,6 @@ for (int j = 0; j < repeat; j++) {
 color.rgb *= 0.4;
 noDirectionalShading = true;
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
 	noiseFactor = 0.0;
 #endif

@@ -8,6 +8,6 @@ smoothnessG = min1(smoothnessG);
 
 smoothnessD = min1(factor + 0.07);
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
     noiseFactor = 1.25;
 #endif

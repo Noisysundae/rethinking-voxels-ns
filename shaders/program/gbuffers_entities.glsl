@@ -16,7 +16,7 @@ in vec3 normal;
 
 in vec4 glColor;
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	in vec2 signMidCoordPos;
 	flat in vec2 absMidCoordPos;
 #endif
@@ -61,7 +61,7 @@ uniform sampler2D tex;
 	#define ATLASTEX tex
 #endif
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
 	uniform sampler2D noisetex;
 #endif
 
@@ -112,7 +112,7 @@ float shadowTime = shadowTimeVar2 * shadowTimeVar2;
 #include "/lib/util/spaceConversion.glsl"
 #include "/lib/lighting/mainLighting.glsl"
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	#include "/lib/util/miplevel.glsl"
 #endif
 
@@ -120,7 +120,7 @@ float shadowTime = shadowTimeVar2 * shadowTimeVar2;
 	#include "/lib/materials/materialMethods/generatedNormals.glsl"
 #endif
 
-#ifdef COATED_TEXTURES
+#if COATED_TEXTURES > 0
 	#include "/lib/materials/materialMethods/coatedTextures.glsl"
 #endif
 
@@ -158,7 +158,7 @@ void main() {
 			GenerateNormals(normalM, colorP);
 		#endif
 
-		#ifdef COATED_TEXTURES
+		#if COATED_TEXTURES > 0
 			CoatTextures(color.rgb, noiseFactor, playerPos);
 		#endif
 	#else
@@ -210,7 +210,7 @@ out vec3 normal;
 
 out vec4 glColor;
 
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	out vec2 signMidCoordPos;
 	flat out vec2 absMidCoordPos;
 #endif
@@ -229,7 +229,7 @@ out vec4 glColor;
 #endif
 
 //Attributes//
-#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 	attribute vec4 mc_midTexCoord;
 #endif
 
@@ -260,7 +260,7 @@ void main() {
 	northVec = normalize(gbufferModelView[2].xyz);
 	sunVec = GetSunVector();
 	
-	#if defined GENERATED_NORMALS || defined COATED_TEXTURES
+	#if defined GENERATED_NORMALS || COATED_TEXTURES > 0
 		vec2 midCoord = (gl_TextureMatrix[0] * mc_midTexCoord).st;
 		vec2 texMinMidCoord = texCoord - midCoord;
 		signMidCoordPos = sign(texMinMidCoord);
