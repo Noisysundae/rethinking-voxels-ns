@@ -17,7 +17,7 @@ vec2 GetRoundedCloudCoord(vec2 pos) { // Thanks to SixthSurge
 }
 
 vec3 ModifyTracePos(vec3 tracePos, float cloudAltitude) {
-    tracePos.x += syncedTime;
+    tracePos.x += syncedTime * 4.0;
     tracePos.z += cloudAltitude * 64.0;
     tracePos.xz *= cloudNarrowness;
     return tracePos.xyz;
