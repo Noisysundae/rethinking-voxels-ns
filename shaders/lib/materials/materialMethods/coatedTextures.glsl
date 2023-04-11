@@ -1,4 +1,4 @@
-const float packSizeNT = 64.0;
+const float packSizeNT = COATED_TEXTURES;
 
 void CoatTextures(inout vec3 color, float noiseFactor, vec3 playerPos) {
     #ifndef SAFER_GENERATED_NORMALS
